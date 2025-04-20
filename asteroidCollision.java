@@ -6,7 +6,7 @@ public class asteroidCollision {
                     if (!ans.isEmpty() ){
                         int peek = ans.peek(); 
                     while (!ans.isEmpty()&&peek<0){
-                        peek = ans.peek();
+                        
                         int val = Math.abs(astro[i]) - Math.abs(peek);
                            if (val>0) { // i is bigger 
                         ans.pop(); 
@@ -15,6 +15,7 @@ public class asteroidCollision {
                             ans.pop();
                             return;
                          }
+                         peek = ans.peek();
                     }
                     }
                            ans.push(astro[i]);
